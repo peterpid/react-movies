@@ -36,9 +36,6 @@ var moviesElements = movies.map(function(movie) {
 	});
 });
 
-var element =
-	React.createElement('div', {},
-		React.createElement('h1', {}, 'List of movies'),
-		React.createElement('ul', {}, moviesElements)
-	);
-ReactDOM.render(element, document.getElementById('app'));
+var movieList =
+	React.createElement(MovieList, {listTitle: 'List of movies', moviesElements: moviesElements});
+ReactDOM.render(movieList, document.getElementById('app'));
