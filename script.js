@@ -1,5 +1,3 @@
-//import Movie from 'components/Movie.js';
-
 var movies = [
 	{
 		id:     '1',
