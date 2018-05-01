@@ -1,3 +1,5 @@
+//import Movie from 'components/Movie.js';
+
 var movies = [
 	{
 		id:     '1',
@@ -26,16 +28,17 @@ var movies = [
 ];
 
 var moviesElements = movies.map(function(movie) {
-	return React.createElement('li', {key: movie.id},
-		React.createElement('h2', {}, movie.title),
-		React.createElement('img', {src: movie.poster, width: 200}),
-		React.createElement('p', {}, movie.desc)
-	);
+	return React.createElement(Movie, {
+		key: movie.id,
+		title: movie.title,
+		imageUrl:movie.poster,
+		description: movie.desc
+	});
 });
 
 var element =
 	React.createElement('div', {},
 		React.createElement('h1', {}, 'List of movies'),
-		React.createElement('ul', {}, moviesElements),
+		React.createElement('ul', {}, moviesElements)
 	);
 ReactDOM.render(element, document.getElementById('app'));

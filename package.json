@@ -6,10 +6,10 @@
   "scripts": {
     "test": "npm-run-all test:html test:js",
     "test:html": "globstar nu-html-checker *.html",
-    "test:js": "globstar jshint js/*.js",
-    "init-project": "npm install && vendor images js && touch js/script.js",
+    "test:js": "globstar jshint *.js components/*.js",
+    "init-project": "npm install && vendor images js && touch script.js",
     "watch": "npm-run-all -p watch:browsersync",
-    "watch:browsersync": "browser-sync start --server --files \"*.html\" \"js/*.js\"",
+    "watch:browsersync": "browser-sync start --server --files \"*.html\" \"*.js\" \"modulse/*.js\"",
     "build": "npm-run-allcd  test"
   },
   "repository": {
